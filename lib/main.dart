@@ -1,9 +1,11 @@
-
 import 'package:flutter/material.dart';
-
+import 'package:flutter_sampraia/telaUm.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const MaterialApp(
+    title: "App",
+    home: MainApp(),
+  ));
 }
 
 class MainApp extends StatelessWidget {
@@ -11,18 +13,45 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return MaterialApp(
       home: Scaffold(
-       backgroundColor: const Color.fromRGBO(179,146,85, 1),
-
-        body: Center(
-          child:Column(
-            
-            children: <Widget>[ 
-              
-              TextButton(onPressed: () => {}, child: const Text('Entrar'), )
-        ],
-          ),
+        body: Stack(
+          children: <Widget>[
+            const Positioned.fill(
+              child: Image(
+                image: AssetImage('img/telainicial.png'),
+                fit: BoxFit.cover,
+              ),
+            ),
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.only(bottom: 165),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    const Image(image: AssetImage('img/logo.png'), fit: BoxFit.cover, width: 150),
+                    const Padding(padding:  EdgeInsets.only(bottom: 95)), // Adicionei const ao EdgeInsets.only
+                    TextButton(
+                      style: TextButton.styleFrom(
+                        foregroundColor: const Color.fromRGBO(35, 66, 57, 1),
+                        textStyle: const TextStyle(fontSize: 70, fontWeight: FontWeight.bold),
+                        backgroundColor: const Color.fromARGB(255, 229, 185, 103),
+                        fixedSize: const Size(280, 90),
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const telaUm()), // Corrigi a chamada para TelaUm
+                        );
+                      },
+                      child: const Text('Entrar'),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );

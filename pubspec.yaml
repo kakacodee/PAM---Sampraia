@@ -19,4 +19,9 @@ flutter:
   uses-material-design: true
   assets:
   - img/
-    
+  - img/telainicial.png 
+  - img/logo.png
+  - img/praiaGrande.png
+  - img/bertioga.png
+  - img/itanhaem.png
+  - img/peruibe.png
