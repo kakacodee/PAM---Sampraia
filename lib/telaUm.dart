@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_sampraia/telaDois.dart';
  void main(){
   runApp(const MaterialApp (title: "App",
       home: telaUm(),));
  }
+  void _onPraiaGrandeTap(BuildContext context, String title) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const telaDois()),
+    );
+  }
 class telaUm extends StatelessWidget {
  const telaUm({super.key});
 
@@ -49,9 +56,9 @@ class telaUm extends StatelessWidget {
           ),
           const Divider(),
       Expanded( child: ListView(
-        children: const <Widget>[
+        children: <Widget>[
            ListTile (
-      title: Padding(
+      title: const Padding(
       padding: EdgeInsets.only(top: 0, left:10),
       child: Text('Praia Grande',
       style: TextStyle(
@@ -61,14 +68,14 @@ class telaUm extends StatelessWidget {
       ),
       ),
     ),
-  trailing: Padding(
+  trailing: const Padding(
     padding: EdgeInsets.only(left: 0), 
     child: Image(image: AssetImage('img/praiaGrande.png'),width: 120, height: 100,),
   ),
-  leading: Column(
+  leading: const Column(
     mainAxisSize: MainAxisSize.min,
     children: <Widget>[
-      SizedBox(height: 12), // Ajuste esta altura conforme necessário
+      SizedBox(height: 12), 
       Row(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
@@ -79,11 +86,14 @@ class telaUm extends StatelessWidget {
       ),
     ],
   ),
+  onTap: () {
+    _onPraiaGrandeTap(context,'PraiaGrande');
+  },
 ),
       Padding(padding: EdgeInsets.only(bottom: 30),),
       Divider(),
           ListTile(
-    title: Padding(
+    title: const Padding(
       padding: EdgeInsets.only( top:0, left:10),
       child: Text('Bertioga', style: TextStyle(
         color: Colors.white,
@@ -92,11 +102,11 @@ class telaUm extends StatelessWidget {
       ),
       ),
     ),
-  trailing: Padding(
+  trailing: const Padding(
     padding: EdgeInsets.only(left: 0), 
     child: Image(image: AssetImage('img/bertioga.png'), width: 120, height: 100),
   ),
-  leading: Column(
+  leading: const Column(
     mainAxisSize: MainAxisSize.min,
     children: <Widget>[
       SizedBox(height: 12), // Ajuste esta altura conforme necessário
@@ -113,22 +123,22 @@ class telaUm extends StatelessWidget {
 ),
 Divider(),
         ListTile(
-    title: Padding(
+    title: const Padding(
       padding: EdgeInsets.only( top:0, left:10),
-      child: Text('Itanhaem', style: TextStyle(
+      child: Text('Itanhaém', style: TextStyle(
         color: Colors.white,
         fontSize: 36,
         fontWeight: FontWeight.bold
       ),
       ),
     ),
-  trailing: Padding(
+  trailing: const Padding(
     padding: EdgeInsets.only(left: 0), 
     child: Image(image: AssetImage('img/itanhaem.png'), width: 120, height: 100),
   ),
-  leading: Column(
+  leading: const Column(
     mainAxisSize: MainAxisSize.min,
-    children: <Widget>[
+    children: const <Widget>[
       SizedBox(height: 12), // Ajuste esta altura conforme necessário
       Row(
         mainAxisSize: MainAxisSize.min,
@@ -143,7 +153,7 @@ Divider(),
 ),
 Divider(),
 ListTile(
-    title: Padding(
+    title: const Padding(
       padding: EdgeInsets.only( top:0, left:10),
       child: Text('Peruíbe', style: TextStyle(
         color: Colors.white,
@@ -152,7 +162,7 @@ ListTile(
       ),
       ),
     ),
-  trailing: Padding(
+  trailing: const Padding(
     padding: EdgeInsets.only(left: 0), 
     child: Image(image: AssetImage('img/peruibe.png'), width: 120, height: 100),
   ),
@@ -170,6 +180,38 @@ ListTile(
       ),
     ],
   ),
+),
+Divider(),
+
+ListTile(
+    title: Padding(
+      padding: EdgeInsets.only( top:0, left:10),
+      child: Text('Mongaguá', style: TextStyle(
+        color: Colors.white,
+        fontSize: 30,
+        fontWeight: FontWeight.bold
+      ),
+      ),
+    ),
+  trailing: Padding(
+    padding: EdgeInsets.only(left: 0), 
+    child: Image(image: AssetImage('img/Mongaguá.png'), width: 120, height: 100),
+  ),
+  leading: Column(
+    mainAxisSize: MainAxisSize.min,
+    children: <Widget>[
+      SizedBox(height: 12), 
+      Row(
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+         Icon(Icons.thumb_up, size: 35),
+          Icon(Icons.star, size: 35),
+          Icon(Icons.waves, size: 35),
+        ],
+      ),
+    ],
+  ),
+  
 ),
         ],
       ),
