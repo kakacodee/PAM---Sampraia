@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+
  void main(){
-  runApp(const MaterialApp (title: "App1",
-      home: telaDois(),));
+  runApp(const MaterialApp (title: "App2",
+      home: telaTres(),));
 
  }
  void _abrirLink1() async{ 
@@ -14,14 +15,14 @@ import 'package:url_launcher/url_launcher.dart';
   throw 'Could not launch $url';
  }
  }
- class telaDois extends StatelessWidget {
- const telaDois({super.key});
+ class telaTres extends StatelessWidget {
+ const telaTres({super.key});
 
 @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor:const  Color.fromRGBO(179, 146, 85, 10),
-        appBar: AppBar(
+    return  Scaffold(
+      backgroundColor: const  Color.fromRGBO(179, 146, 85, 10),
+      appBar: AppBar(
          //title: const Text('Pesquisar...'),
         title: Image.asset('img/logo2.png',),
         backgroundColor:const Color.fromRGBO(214, 173, 96, 1),
@@ -55,7 +56,7 @@ import 'package:url_launcher/url_launcher.dart';
           children: 
         <Widget>[
           Padding(padding: EdgeInsets.only(top: 10, bottom: 20)),
-            Text('Praia Grande',
+        Text('Bertioga',
             style: TextStyle(
               fontSize: 40,
               fontWeight: FontWeight.bold,
@@ -63,10 +64,10 @@ import 'package:url_launcher/url_launcher.dart';
             )),
             Divider(),
             Padding(padding: EdgeInsets.only(top:10)),
-           Image(image: AssetImage('img/praia1.png'), ),
+           Image(image: AssetImage('img/praia2.png'), ),
            Padding(padding: EdgeInsets.only(top: 40),),
            
-           Text('Praia Grande é uma das cidades mais populares do litoral sul do estado de São Paulo, Brasil. Com uma extensão de aproximadamente 23 km de litoral, é conhecida por suas praias amplas e urbanizadas, que atraem turistas durante todo o ano.',
+           Text('Bertioga é uma cidade litorânea em São Paulo, famosa por suas belas praias e pelo histórico Forte São João. O turismo é a principal atividade econômica, complementada pela pesca e agricultura. A cidade valoriza a preservação ambiental e oferece diversas opções de ecoturismo.',
            //textAlign: ,
            style: TextStyle(
             
@@ -90,7 +91,7 @@ import 'package:url_launcher/url_launcher.dart';
             fontWeight: FontWeight.bold,
             ),
             ),
-            contentPadding: EdgeInsets.only(bottom: 10, left: 10),
+            contentPadding: EdgeInsets.only(bottom: 15, left: 10),
             ),
             
             ListTile(
@@ -102,14 +103,14 @@ import 'package:url_launcher/url_launcher.dart';
             fontSize: 20,
             fontWeight: FontWeight.bold,)
             ,),
-            contentPadding: EdgeInsets.only(bottom: 10, top: 10, left:10),),
+            contentPadding: EdgeInsets.only(bottom: 15, top: 15, left:10),),
             ListTile(
               
               title: Text('Ondas Calmas e fáceis de pegar',  style: TextStyle(
             backgroundColor: Color.fromRGBO(214, 173, 96, 1),
             fontSize: 20,
             fontWeight: FontWeight.bold,),),
-             contentPadding: EdgeInsets.only(top:10, left: 10),
+             contentPadding: EdgeInsets.only(top:15, left: 10),
               trailing: 
             Icon(Icons.waves, size: 50),
            ),
@@ -121,7 +122,6 @@ import 'package:url_launcher/url_launcher.dart';
       ),
       
     );
+    
  
- 
- }
- }
+ }}
