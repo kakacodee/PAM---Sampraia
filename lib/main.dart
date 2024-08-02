@@ -25,19 +25,19 @@ class MainApp extends StatelessWidget {
             ),
             Center(
               child: Padding(
-                padding: const EdgeInsets.only(bottom: 165),
+                padding: const EdgeInsets.only(bottom: 165, top: 300),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-                    const Image(image: AssetImage('img/logo.png'), fit: BoxFit.cover, width: 150),
                     const Padding(padding:  EdgeInsets.only(bottom: 95)), // Adicionei const ao EdgeInsets.only
                     TextButton(
                       style: TextButton.styleFrom(
                         foregroundColor: const Color.fromRGBO(35, 66, 57, 1),
-                        textStyle: const TextStyle(fontSize: 70, fontWeight: FontWeight.bold),
+                        textStyle: const TextStyle(fontSize: 55, fontWeight: FontWeight.bold),
                         backgroundColor: const Color.fromARGB(255, 229, 185, 103),
                         fixedSize: const Size(280, 90),
+                        
                       ),
                       onPressed: () {
                         Navigator.push(

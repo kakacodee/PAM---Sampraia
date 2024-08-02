@@ -64,8 +64,7 @@ import 'package:url_launcher/url_launcher.dart';
             Divider(),
             Padding(padding: EdgeInsets.only(top:10)),
            Image(image: AssetImage('img/praia1.png'), ),
-           Padding(padding: EdgeInsets.only(top: 40),),
-           
+           Padding(padding: EdgeInsets.only(top: 40, left: 10),),
            Text('Praia Grande é uma das cidades mais populares do litoral sul do estado de São Paulo, Brasil. Com uma extensão de aproximadamente 23 km de litoral, é conhecida por suas praias amplas e urbanizadas, que atraem turistas durante todo o ano.',
            //textAlign: ,
            style: TextStyle(
@@ -73,6 +72,7 @@ import 'package:url_launcher/url_launcher.dart';
             backgroundColor: Color.fromRGBO(214, 173, 96, 1),
             fontSize: 18,
             fontWeight: FontWeight.bold,
+         
             
            ),
            

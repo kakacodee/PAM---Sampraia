@@ -131,7 +131,7 @@ class telaUm extends StatelessWidget {
       child: Text('Praia Grande',
       style: TextStyle(
         color: Colors.white,
-        fontSize: 25,
+        fontSize: 30,
         fontWeight: FontWeight.bold
       ),
       ),
@@ -165,7 +165,7 @@ class telaUm extends StatelessWidget {
       padding: EdgeInsets.only( top:0, left:10),
       child: Text('Bertioga', style: TextStyle(
         color: Colors.white,
-        fontSize: 35,
+        fontSize: 30,
         fontWeight: FontWeight.bold
       ),
       ),
@@ -198,7 +198,7 @@ class telaUm extends StatelessWidget {
       padding: EdgeInsets.only( top:0, left:10),
       child: Text('Itanhaém', style: TextStyle(
         color: Colors.white,
-        fontSize: 34,
+        fontSize: 30,
         fontWeight: FontWeight.bold
       ),
       ),
@@ -231,7 +231,7 @@ ListTile(
       padding: EdgeInsets.only( top:0, left:10),
       child: Text('Peruíbe', style: TextStyle(
         color: Colors.white,
-        fontSize: 40,
+        fontSize: 30,
         fontWeight: FontWeight.bold
       ),
       ),
